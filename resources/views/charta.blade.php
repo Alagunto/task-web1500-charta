@@ -60,7 +60,7 @@
                                 @foreach($charta->reports as $report)
                                     <li>
                                         <kbd>
-                                            {{ substr(json_encode((string)$report->name), 1, -1) }}</kbd>: {{ $report->text }} в {{ $sign->created_at }}
+                                            {{ substr(json_encode((string)$report->name), 1, -1) }}</kbd>: {{ $report->text }} в {{ $report->created_at }}
                                     </li>
                                 @endforeach
                             </ul>

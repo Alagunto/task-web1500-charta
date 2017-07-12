@@ -73,8 +73,8 @@ class ChartaController extends Controller
 
         $text = addslashes(request("text"));
 
-        DB::raw(
-            "INSERT INTO reports VALUES (0, {$charta->id}, '$encrypted_name', '$text', NOW(), NOW());"
+        DB::statement(
+            "INSERT INTO reports (charta_id, name, text, updated_at, created_at) VALUES ({$charta->id}, '$encrypted_name', '$text', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);"
         );
 
         return redirect()->back();
