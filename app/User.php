@@ -30,4 +30,8 @@ class User extends Authenticatable
     public function chartas() {
         return $this->hasMany(Charta::class);
     }
+
+    public function getAuthPassword() {
+        return $this->password;
+    }
 }
