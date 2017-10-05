@@ -4,7 +4,7 @@ use App\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Storage;
 
-class FlagSeeder extends Seeder
+class AdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -24,6 +24,5 @@ class FlagSeeder extends Seeder
                 "is_admin" => 1
             ]
         );
-        Storage::disk('local')->put('flag.php', 'flag{rock_and_roll_fellow_hacker_rock_and_roll}');
     }
 }

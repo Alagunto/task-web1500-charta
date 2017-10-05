@@ -26,6 +26,8 @@ Route::group(["middleware" => "auth"], function() {
     Route::get('/charta/{charta}/sign', 'ChartaController@sign');
     Route::get('/charta/{charta}/report', 'ChartaController@report');
     Route::any("/admin", 'HomeController@admin');
+    Route::any("/admin/export", 'HomeController@export');
+    Route::any("/admin/import", 'HomeController@import');
 });
 //Route::get('/chartas',)
 

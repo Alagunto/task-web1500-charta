@@ -12,8 +12,8 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
-    "encryption_key" => "YOUAREONARIGHTWAY",
+    'name' => "Charta",
+    "encryption_key" => "GetEasyBroFlagIsNotHere",
 
     /*
     |--------------------------------------------------------------------------

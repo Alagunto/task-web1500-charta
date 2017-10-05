@@ -41,7 +41,7 @@
                             <li><a href="/chartas">Все харты</a></li>
                             <li><a href="/chartas/create">Создать харту</a></li>
                             @if(auth()->user()->is_admin)
-                                <li><a href="/admin">Отладка</a></li>
+                                <li><a href="/admin">Администрирование</a></li>
                             @endif
                         @endif
                     </ul>

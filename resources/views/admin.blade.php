@@ -5,14 +5,28 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Отладка</div>
+                <div class="panel-heading">Import</div>
 
                 <div class="panel-body">
-                    <form method="POST">
+                    <form method="POST" action="/admin/import" enctype="multipart/form-data">
                         {!! csrf_field() !!}
-                        <input type="text" name="include" placeholder="what to include" />
-                        <input type="submit" value="include_once" /> <br />
-                        <small>Note: you can only include pages of this site</small>
+                        <input type="file" name="import" placeholder="Import chartas" />
+                        <br />
+                        <input type="submit" value="Import" /> <br />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Export</div>
+
+                <div class="panel-body">
+                    <form method="POST" action="/admin/export">
+                        {!! csrf_field() !!}
+                        <input type="submit" value="Export" /> <br />
                     </form>
                 </div>
             </div>
