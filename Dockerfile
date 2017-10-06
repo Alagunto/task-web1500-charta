@@ -16,8 +16,6 @@ USER web
 RUN ls
 RUN pwd
 RUN composer install
-RUN php artisan migrate
-RUN php artisan db:seed
 #RUN php artisan key:generate
 
 
