@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "9090:8000"
+    command: ["php","artisan","serve","--host","0.0.0.0"]
+    depends_on:
+
+      - database
+    links:
+      - database:database
+    environment:
+        - "DB_PORT=3306"
+        - "DB_HOST=database"
+        - "APP_ENV=local"
+
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: task
+      MYSQL_USER: task
+      MYSQL_PASSWORD: task
+    ports:
+        - "33061:3306"
